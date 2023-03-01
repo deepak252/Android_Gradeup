@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="12dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImgCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:elevation="0dp"
+            >
+
+            <ImageView
+                android:id="@+id/imgProductCart"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img1"
+
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvNameProductCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="Product name"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/cardImgCart"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCategoryProductCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Category"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/cardImgCart"
+
+            app:layout_constraintTop_toBottomOf="@id/tvNameProductCart" />
+
+        <TextView
+            android:id="@+id/tvPriceProductCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="100"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/cardImgCart"
+
+            app:layout_constraintTop_toBottomOf="@id/tvCategoryProductCart" />
+
+        <Spinner
+            android:id="@+id/ddItemCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardImgCart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/cardImgCart"
+            app:layout_constraintTop_toBottomOf="@id/tvPriceProductCart"
+
+            />
+
+        <Button
+            android:id="@+id/btnDeleteCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#434242"
+            android:text="Delete"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/ddItemCount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@id/ddItemCount"
+            app:layout_constraintTop_toTopOf="@+id/ddItemCount"
+            android:textAllCaps="false"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:padding="12dp">-->
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cardImgCart"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cardCornerRadius="12dp"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        >-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imgProductCart"-->
+<!--            android:layout_width="120dp"-->
+<!--            android:layout_height="140dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/item1"-->
+
+<!--            />-->
+
+<!--    </androidx.cardview.widget.CardView>-->
+<!--    &lt;!&ndash;    <ImageView&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:id="@+id/imgProductCart"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_width="120dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_height="140dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:scaleType="centerCrop"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:src="@drawable/item1"&ndash;&gt;-->
+<!--    &lt;!&ndash;        app:layout_constraintLeft_toLeftOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;        app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;        />&ndash;&gt;-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvNameProductCart"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="12dp"-->
+<!--        android:text="Product name"-->
+<!--        android:textSize="17sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toEndOf="@id/cardImgCart"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvCategoryProductCart"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="12dp"-->
+<!--        android:text="Category"-->
+<!--        android:textSize="17sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toEndOf="@id/cardImgCart"-->
+
+<!--        app:layout_constraintTop_toBottomOf="@id/tvNameProductCart" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvPriceProductCart"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="12dp"-->
+<!--        android:text="100"-->
+<!--        android:textSize="17sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toEndOf="@id/cardImgCart"-->
+
+<!--        app:layout_constraintTop_toBottomOf="@id/tvCategoryProductCart" />-->
+
+<!--    <Spinner-->
+<!--        android:id="@+id/ddItemCount"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="12dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/cardImgCart"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toEndOf="@id/cardImgCart"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tvPriceProductCart"-->
+
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnDeleteCart"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="#434242"-->
+<!--        android:text="Delete"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="12dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/ddItemCount"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="1"-->
+<!--        app:layout_constraintStart_toEndOf="@id/ddItemCount"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/ddItemCount" />-->
+
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
